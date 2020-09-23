@@ -2,5 +2,17 @@
     "manifest_version": 2,
     "name": "VoiceToText",
     "version": "0.0.1",
-    "description": "converts voice to text."
+    "description": "converts voice to text.",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["jquery-3.5.1.min.js", "content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
 }
